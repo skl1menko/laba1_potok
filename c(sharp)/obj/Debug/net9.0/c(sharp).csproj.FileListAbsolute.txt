@@ -1,0 +1,14 @@
+C:\Users\alkli\Desktop\laba1_potok\c(sharp)\bin\Debug\net9.0\c(sharp).exe
+C:\Users\alkli\Desktop\laba1_potok\c(sharp)\bin\Debug\net9.0\c(sharp).deps.json
+C:\Users\alkli\Desktop\laba1_potok\c(sharp)\bin\Debug\net9.0\c(sharp).runtimeconfig.json
+C:\Users\alkli\Desktop\laba1_potok\c(sharp)\bin\Debug\net9.0\c(sharp).dll
+C:\Users\alkli\Desktop\laba1_potok\c(sharp)\bin\Debug\net9.0\c(sharp).pdb
+C:\Users\alkli\Desktop\laba1_potok\c(sharp)\obj\Debug\net9.0\c(sharp).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alkli\Desktop\laba1_potok\c(sharp)\obj\Debug\net9.0\c(sharp).AssemblyInfoInputs.cache
+C:\Users\alkli\Desktop\laba1_potok\c(sharp)\obj\Debug\net9.0\c(sharp).AssemblyInfo.cs
+C:\Users\alkli\Desktop\laba1_potok\c(sharp)\obj\Debug\net9.0\c(sharp).csproj.CoreCompileInputs.cache
+C:\Users\alkli\Desktop\laba1_potok\c(sharp)\obj\Debug\net9.0\c(sharp).dll
+C:\Users\alkli\Desktop\laba1_potok\c(sharp)\obj\Debug\net9.0\refint\c(sharp).dll
+C:\Users\alkli\Desktop\laba1_potok\c(sharp)\obj\Debug\net9.0\c(sharp).pdb
+C:\Users\alkli\Desktop\laba1_potok\c(sharp)\obj\Debug\net9.0\c(sharp).genruntimeconfig.cache
+C:\Users\alkli\Desktop\laba1_potok\c(sharp)\obj\Debug\net9.0\ref\c(sharp).dll
