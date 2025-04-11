@@ -17,15 +17,43 @@ namespace Company
 
         public void Start()
         {
-            for (int i = 0; i < threads.Count; i++)
+            new Thread(() =>
             {
-                int delay = stopTimes[i];
-                var thread = threads[i];
-                new Thread(() =>
+                List<ThreadInfo> threadInfoList = new List<ThreadInfo>();
+                for (int i = 0; i < threads.Count; i++)
                 {
+                    threadInfoList.Add(new ThreadInfo { Index = i, StopTime = stopTimes[i] });
+                }
+
+                threadInfoList.Sort(new ThreadInfoComparer());
+
+                int previousTime = 0;
+
+                foreach (var info in threadInfoList)
+                {
+                    int delay = info.StopTime - previousTime;
                     Thread.Sleep(delay);
-                    thread.StopRunning();
-                }).Start();
+                    threads[info.Index].StopRunning();
+                    Console.WriteLine($"Потік #{info.Index + 1} зупинено через {info.StopTime} мс");
+                    previousTime = info.StopTime;
+                }
+
+            }).Start();
+        }
+
+        // Допоміжний клас для збереження інформації про потік
+        class ThreadInfo
+        {
+            public int Index;
+            public int StopTime;
+        }
+
+        // Класичний компаратор без лямбда-виразів
+        class ThreadInfoComparer : IComparer<ThreadInfo>
+        {
+            public int Compare(ThreadInfo a, ThreadInfo b)
+            {
+                return a.StopTime.CompareTo(b.StopTime);
             }
         }
     }
@@ -58,7 +86,6 @@ namespace Company
                 sum += value;
                 count++;
                 value += step;
-                Thread.Sleep(10);
             }
             Console.WriteLine($"Потік #{id}: Сума = {sum}, Кількість доданків = {count}");
         }
@@ -72,24 +99,22 @@ namespace Company
             int step = 2;
 
             Random rand = new Random();
-            List<int> delays = new List<int>();
             List<WorkerThread> threads = new List<WorkerThread>();
+            List<int> delays = new List<int>();
 
             for (int i = 0; i < numThreads; i++)
             {
-                int delay = rand.Next(5000, 20001); // Від 5 до 20 секунд у мілісекундах
+                int delay = rand.Next(5000, 20001); // 5–20 сек
                 delays.Add(delay);
                 threads.Add(new WorkerThread(i + 1, step));
                 Console.WriteLine($"Потік #{i + 1} буде зупинено через {delay} мс");
             }
 
-            // Запуск усіх потоків
             foreach (var thread in threads)
             {
                 new Thread(thread.Start).Start();
             }
 
-            // Керуючий потік для зупинки
             ControllerThread controller = new ControllerThread(threads, delays);
             controller.Start();
         }

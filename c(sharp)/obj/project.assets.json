@@ -8,24 +8,25 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\alkli\\.nuget\\packages\\": {}
+    "/Users/sashaklymenko/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alkli\\Desktop\\laba1_potok\\c(sharp)\\c(sharp).csproj",
+      "projectUniqueName": "/Users/sashaklymenko/Desktop/2/laba1_potok/c(sharp)/c(sharp).csproj",
       "projectName": "c(sharp)",
-      "projectPath": "C:\\Users\\alkli\\Desktop\\laba1_potok\\c(sharp)\\c(sharp).csproj",
-      "packagesPath": "C:\\Users\\alkli\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alkli\\Desktop\\laba1_potok\\c(sharp)\\obj\\",
+      "projectPath": "/Users/sashaklymenko/Desktop/2/laba1_potok/c(sharp)/c(sharp).csproj",
+      "packagesPath": "/Users/sashaklymenko/.nuget/packages/",
+      "outputPath": "/Users/sashaklymenko/Desktop/2/laba1_potok/c(sharp)/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\alkli\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/sashaklymenko/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -65,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
